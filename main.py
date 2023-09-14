@@ -185,17 +185,17 @@ def display_ticket_statistics():
     tickets_to_solve = 0
 
     for ticket in client_list:
-        if ticket.ticket_status == "Open" or ticket.ticket_status == "Closed":
+        if ticket.ticket_status == "Open" or ticket.ticket_status == "Closed" or ticket.ticket_status == "closed" or ticket.ticket_status == "open":
             created_tickets += 1
-            if ticket.ticket_status == "Closed":
+            if ticket.ticket_status == "Closed" or ticket.ticket_status == "closed":
                 tickets_resolved += 1
-            elif ticket.ticket_status == "Open":
+            elif ticket.ticket_status == "Open" or ticket.ticket_status == "open":
                 tickets_to_solve += 1
 
     print("\nTicket Statistics:")
     print(f"Tickets Created: {created_tickets}")
-    print(f"Resolved Tickets: {tickets_resolved}")
-    print(f"Responded Tickets: {tickets_to_solve}")
+    print(f"Tickets Resolved: {tickets_resolved}")
+    print(f"Tickets To Solve: {tickets_to_solve}")
 
 
 

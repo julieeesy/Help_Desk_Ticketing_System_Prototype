@@ -31,3 +31,4 @@ class Ticket:
     def new_ticket_status(self):
         new_status = input("Enter New TICKET STATUS [open/closed]: ")
         self.ticket_status = new_status
+
